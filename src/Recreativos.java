@@ -26,7 +26,6 @@ public class Recreativos {
 			multi=false;
 		}
 		
-		
 		//buscar posicion libre en el vector
 		for (int i=0; i<vJuegos.length;i++) {
 			if (vJuegos[i]==null) {
@@ -71,7 +70,7 @@ public class Recreativos {
 		guardarJuego(vJuegos);
 		
 		for (int i=0;i<vJuegos.length;i++) {
-			if (vJuegos[i]!=null ) { // solo muestra los multijugador
+			if (vJuegos[i]!=null ) { 
 			System.out.println(vJuegos[i].toString());
 			}
 		}
