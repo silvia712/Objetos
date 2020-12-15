@@ -34,7 +34,6 @@ public Perro(String nombre) { // otro constructor que solo recibe nombre
 }
 
 
-
 public String getNombre() {//Source
 	return nombre;
 }

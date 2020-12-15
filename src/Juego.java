@@ -5,17 +5,32 @@ public class Juego {
 	private int record;
 	private boolean multijugadores;
 	
-public Juego(String nombre) { // constructor solo recibe nombre
+public Juego(String nombre) { // constructor q solo recibe nombre
 	
 	this.nombre=nombre; // this para guardar el nombre que reciba
-	record=0; // o tambien podemos poner this.record=0
+	record=0; // tambien podemos poner this.record=0
 	multijugadores=false;
 }
+
+
+public Juego(String nombre, int record, boolean multijugadores) {
+	this.nombre = nombre;
+	this.record = record;
+	this.multijugadores = multijugadores;
+}
+
+
+
+public Juego(String nombre, boolean multijugadores) {
+	this.nombre = nombre;
+	this.multijugadores = multijugadores;
+	this.record = 0;
+}
+
 
 public void ponerRecord(int puntacion) {
 	record=puntacion;	
 }
-
 
 
 public String getNombre() { 

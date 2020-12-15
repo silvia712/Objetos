@@ -1,20 +1,39 @@
+import java.util.Scanner;
 
 public class Recreativos {
 
 	public static int pintaMenu() {
-		
-		//guardar un nuevo juego
 		//poner puntuacion a un juego
 		//ver todos los juegos
-		
-		
 	}
 	
 	
-	
-	
-	public static void guardarJuego(Juego vJuegos[]) {
 		
+	public static void guardarJuego(Juego vJuegos[]) {
+		//pedimos los datos del juego
+		Scanner leer=new Scanner(System.in);
+		
+		String nombre, aux;
+		boolean multi;
+		
+		System.out.println("Escribe el nombre del juego ");
+		nombre=leer.nextLine();
+		System.out.println("Escribe si es multijugador si o no");
+		aux=leer.next();
+		if(aux.equalsIgnoreCase("si")) {
+			multi=true;
+		}else {
+			multi=false;
+		}
+		
+		
+		//buscar posicion libre en el vector
+		for (int i=0; i<vJuegos.length;i++) {
+			if (vJuegos[i]==null) {
+				vJuegos[i]=new Juego(nombre, multi);
+				break;
+			}
+		}		
 	}
 	
 	
@@ -42,19 +61,20 @@ public class Recreativos {
 		vJuegos[2].setMultijugadores(true);
 		vJuegos[2].ponerRecord(100);
 		
-		for (int i=0;i<vJuegos.length;i++) {
-			if (vJuegos[i]!=null && vJuegos[i].isMultijugadores()== true ) { // solo muestra los multijugador
-			System.out.println(vJuegos[i].toString());
-			}
-		}
+		
 		
 		
 		System.out.println(juego1.toString());
 		System.out.println(vJuegos[0]);
-		
-		
 	
-
+		
+		guardarJuego(vJuegos);
+		
+		for (int i=0;i<vJuegos.length;i++) {
+			if (vJuegos[i]!=null ) { // solo muestra los multijugador
+			System.out.println(vJuegos[i].toString());
+			}
+		}
 	}
 
 }
