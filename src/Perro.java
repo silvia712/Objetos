@@ -3,43 +3,67 @@
 // ATRIBUTOS - (privado)
 // METODOS + (publico)
 
+import java.util.Random;
 
-public class Perro { //ATRIBUTOS de la clase. Siempre PRIVATE
+public class Perro { 
 
 	private String nombre;
+	private int numChip;
 	private int edad;
-	private boolean vacunado;	
+	boolean vacunado;
 
 
-public Perro() { // CONSTRUCTOR: inicializamos variables.Por defecto,sin parametros
+
+public Perro() { 
 	
-	nombre=" ";
-	edad=0;
-	vacunado=false;
+	nombre = "";
+	edad =0;
+	numChip = 0;
 }
 
-public Perro(String nombre,int edad,int vacunado) { // constructor donde pasan los datos
-	
-	this.nombre=nombre;
-	this.edad=0;
-	this.vacunado=false;
-	
-}
-public Perro(String nombre) { // otro constructor que solo recibe nombre
-	
-	this.nombre=nombre;
-	this.edad=0;
-	this.vacunado=false;
-	
+public Perro(String nombre, int edad) {
+	this.nombre = nombre;
+	this.edad = edad;
+	numChip = 0;
 }
 
+public Perro(String nombre, int numChip, int edad) {
+	this.nombre = nombre;
+	this.numChip = numChip;
+	this.edad = edad;
+}
 
-public String getNombre() {//Source
-	return nombre;
+public boolean comprobarChip() {
+	if(numChip%2 == 0) {
+		return true;
+	}else {
+		return false;
+	}
+}
+
+public void poneChip() {
+	if (numChip != 0) {
+		System.out.println("Este perro ya tiene chip");
+	}else {
+		Random r = new Random();
+		this.numChip = r.nextInt(100)+1;
+	}
+}
+
+public String getNombre() {
+	return nombre.toUpperCase();
 }
 
 public void setNombre(String nombre) {
 	this.nombre = nombre;
+}
+
+public int getNumChip() {
+	return numChip;
+}
+
+public void setNumChip(int numChip) {
+	this.numChip = numChip;
 }
 
 public int getEdad() {
@@ -58,7 +82,6 @@ public void setVacunado(boolean vacunado) {
 	this.vacunado = vacunado;
 }
 
-
 public void cumpleanos() {
 	
 	if (edad>15) {
@@ -76,16 +99,40 @@ public void ponerVacuna() {
 		System.out.println("ya esta vacucando");
 		
 	}
-	
-	
-public String toString() {
-	
-	String perro="";
-	perro=nombre + edad + vacunado;
-	return perro;
-	
 }
+
+
+
+@Override
+public String toString() {
+	return  nombre + " ---- Chip=" + numChip + " --- edad=" + edad;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
+
 	
 
 }
