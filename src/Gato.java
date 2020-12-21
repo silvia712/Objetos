@@ -1,3 +1,6 @@
+	// NOMBRE
+	// ATRIBUTOS - privado
+	// METODO + publico
 
 
 	// 1-CREAMOS LA CLASS (sin el main) y siempre en mayuscula la primera letra
@@ -5,7 +8,7 @@
 	public class Gato {				
 
 	// 2-DEFINIMOS ATRIBUTOS (propiedades/caracteristicas) de la CLASS "gato" 	
-	// (Gato tiene un nombre, vidas, color....). Siempre seran PRIVATE (encapsulamos la propiedad) (simbolo -)
+	// (Gato tiene un nombre, vidas, color....). Siempre seran PRIVATE (encapsulamos la propiedad)
 	
 		private String nombre; 		
 		private int vidas;			
@@ -24,7 +27,7 @@
 	}
 	
 	//Podemos crear tantos constructores como queramos.
-	//Una forma rapida para crearlos es desde la pestaña SOURCE (generate constructor using Fields...)
+	//Una forma rapida para crearlos es desde la pestaï¿½a SOURCE (generate constructor using Fields...)
 	//Este es otro construtor que recibe los paramentros desde el exterior.
 	
 	public Gato(String nombre,int vidas,int numPatas) {
@@ -73,7 +76,7 @@
 	}
 
 	
-	//5-GENERAMOS TO STRING para mostrar los datos (tambien desde SOURCE). Siempre irá la final.
+	//5-GENERAMOS TO STRING para mostrar los datos (tambien desde SOURCE). Siempre irï¿½ la final.
 
 	@Override
 	public String toString() {

@@ -1,25 +1,21 @@
 
-// NOMBRE
-// ATRIBUTOS - (privado)
-// METODOS + (publico)
 
-import java.util.Random;
+	import java.util.Random;
 
-public class Perro { 
+		public class Perro { 
 
-	private String nombre;
-	private int numChip;
-	private int edad;
-	boolean vacunado;
+			private String nombre;
+			private int numChip;
+			private int edad;
+			boolean vacunado;
 
-
-
-public Perro() { 
+			
+		public Perro() { 
 	
-	nombre = "";
-	edad =0;
-	numChip = 0;
-}
+			this.nombre = "";
+			this.edad = 0;
+			this.numChip = 0;
+		}
 
 public Perro(String nombre, int edad) {
 	this.nombre = nombre;
